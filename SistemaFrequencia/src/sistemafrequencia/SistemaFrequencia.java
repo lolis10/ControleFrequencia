@@ -1,6 +1,8 @@
 
 package sistemafrequencia;
 
+import view.Login;
+
 public class SistemaFrequencia {
 
     
