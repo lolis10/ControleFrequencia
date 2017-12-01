@@ -1,5 +1,5 @@
 
-package sistemafrequencia;
+package model;
 
 import view.Login;
 
