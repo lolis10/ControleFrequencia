@@ -47,11 +47,11 @@
                   <EmptySpace pref="103" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton3" linkSize="2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton1" linkSize="2" max="32767" attributes="0"/>
-                          <Component id="jButton2" linkSize="2" pref="203" max="32767" attributes="0"/>
+                          <Component id="botao_AlterarAusenciasEquipe" linkSize="2" min="-2" max="-2" attributes="0"/>
+                          <Component id="botao_RegistrarFrequencia" linkSize="2" max="32767" attributes="0"/>
+                          <Component id="botao_JustificarAusencias" linkSize="2" pref="203" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label_SistemaFrequencia" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
               </Group>
@@ -61,20 +61,20 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="label_SistemaFrequencia" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                  <Component id="jButton1" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="botao_RegistrarFrequencia" linkSize="1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="57" max="-2" attributes="0"/>
+                  <Component id="botao_JustificarAusencias" min="-2" pref="57" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton3" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="botao_AlterarAusenciasEquipe" linkSize="1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="31" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="botao_RegistrarFrequencia">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/sistemafrequencia/icons/icons8-Rel&#xf3;gio-48.png"/>
@@ -82,10 +82,10 @@
             <Property name="text" type="java.lang.String" value="Registrar Frequ&#xea;ncia"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botao_RegistrarFrequenciaActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="label_SistemaFrequencia">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
@@ -93,7 +93,7 @@
             <Property name="text" type="java.lang.String" value="Sistema de Frequ&#xea;ncia"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="botao_JustificarAusencias">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/sistemafrequencia/icons/icons8-Sair-48.png"/>
@@ -102,7 +102,7 @@
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="botao_AlterarAusenciasEquipe">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/sistemafrequencia/icons/icons8-Empres&#xe1;ria-48.png"/>
