@@ -65,6 +65,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         botao_Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Casa-48.png"))); // NOI18N
         botao_Voltar.setText("Voltar");
+        botao_Voltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao_VoltarActionPerformed(evt);
+            }
+        });
 
         botao_Sair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Porta aberta-48.png"))); // NOI18N
         botao_Sair.setText("Sair");
@@ -147,6 +152,12 @@ public class MainWindow extends javax.swing.JFrame {
     private void botao_SairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_SairActionPerformed
         dispose();
     }//GEN-LAST:event_botao_SairActionPerformed
+
+    private void botao_VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_VoltarActionPerformed
+        Login janelaLogin = new Login();
+        janelaLogin.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botao_VoltarActionPerformed
 
     /**
      * @param args the command line arguments
