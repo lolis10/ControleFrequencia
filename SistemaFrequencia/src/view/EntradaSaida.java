@@ -5,6 +5,11 @@
  */
 package view;
 
+import connection.ConexaoBD;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,14 +17,23 @@ import javax.swing.JOptionPane;
  * @author Luisw7
  */
 public class EntradaSaida extends javax.swing.JFrame {
-
+    ConexaoBD conex = new ConexaoBD();
+    String id;
+    Autenticacao au = new Autenticacao();
     /**
      * Creates new form EntradaSaida
      */
-    public EntradaSaida() {
+    public EntradaSaida(){
         initComponents();
+        JOptionPane.showMessageDialog(null,id);
     }
-
+    
+    public void setID(String id){
+        this.id = au.getTipo();
+    }
+    public String getID(){
+        return id;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -114,22 +128,10 @@ public class EntradaSaida extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        
-        PontoRegistrado p = new PontoRegistrado();
-        p.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        conex.conexao();
         String mes = new java.text.SimpleDateFormat("MM").format(new java.util.Date());;
-        String id = "1";
-        String tipo = "s";
-        String a = "\'";
+        String tipo = "e";
+        String a = "\"";
         
         if (mes.equals("01")) mes = "janeiro";
         if (mes.equals("02")) mes = "fevereiro";
@@ -146,9 +148,7 @@ public class EntradaSaida extends javax.swing.JFrame {
         
         String registro = " UPDATE";
         registro +=' ';
-        registro +=a;
         registro +=mes;
-        registro +=a;
         registro +=' ';
         registro +="SET";
         registro +=' ';
@@ -175,10 +175,87 @@ public class EntradaSaida extends javax.swing.JFrame {
         registro +='=';
         registro +=id;
         
-        JOptionPane.showMessageDialog(null,registro);
+        try {
+            PreparedStatement pst = conex.con.prepareStatement(registro);
+            pst.execute();
+            JOptionPane.showMessageDialog(null,registro);
+            PontoRegistrado p = new PontoRegistrado();
+            p.setVisible(true);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,"Erro ao realizar instrução:\n"+ex);
+            conex.desconecta();
+            //Logger.getLogger(EntradaSaida.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //JOptionPane.showMessageDialog(null,registro);
         
-        PontoRegistrado p = new PontoRegistrado();
-        p.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        conex.conexao();
+        String mes = new java.text.SimpleDateFormat("MM").format(new java.util.Date());;
+        String tipo = "s";
+        String a = "\"";
+        
+        if (mes.equals("01")) mes = "janeiro";
+        if (mes.equals("02")) mes = "fevereiro";
+        if (mes.equals("03")) mes = "marco";
+        if (mes.equals("04")) mes = "abril";
+        if (mes.equals("05")) mes = "maio";
+        if (mes.equals("06")) mes = "junho";
+        if (mes.equals("07")) mes = "julho";
+        if (mes.equals("08")) mes = "agosto";
+        if (mes.equals("09")) mes = "setembro";
+        if (mes.equals("10")) mes = "outubro";
+        if (mes.equals("11")) mes = "novembro";
+        if (mes.equals("12")) mes = "dezembro";
+        
+        String registro = " UPDATE";
+        registro +=' ';
+        registro +=mes;
+        registro +=' ';
+        registro +="SET";
+        registro +=' ';
+        registro +=a;
+        registro += new java.text.SimpleDateFormat("dd").format(new java.util.Date());
+        registro +=' ';
+        registro +=tipo;
+        registro +=a;
+        registro +=' ';
+        registro +='=';
+        registro +=' ';
+        registro +='1';
+        registro +=' ';
+        registro +="WHERE";
+        registro +=' ';
+        registro +=a;
+        registro +=mes;
+        registro +=a;
+        registro +='.';
+        registro +=a;
+        registro +="id";
+        registro +=a;
+        registro +=' ';
+        registro +='=';
+        registro +=id;
+        
+        try {
+            PreparedStatement pst = conex.con.prepareStatement(registro);
+            pst.execute();
+            JOptionPane.showMessageDialog(null,registro);
+            PontoRegistrado p = new PontoRegistrado();
+            p.setVisible(true);
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null,"Erro ao realizar instrução:\n"+registro);
+            conex.desconecta();
+            //Logger.getLogger(EntradaSaida.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        //JOptionPane.showMessageDialog(null,registro);
+        
         dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 

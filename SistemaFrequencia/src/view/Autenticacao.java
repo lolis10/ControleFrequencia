@@ -138,60 +138,36 @@ public class Autenticacao extends javax.swing.JFrame {
         try {
             conexao.executaSQL("select * from autenticacao where cpf='"+jCPF.getText()+"'");
             conexao.rs.first();
-                if(conexao.rs.getString("senha").equals(jSenha.getText())){
-                        if(conexao.rs.getString("id").equals(tipo)){
-                        String diaAtual = new java.text.SimpleDateFormat("dd").format(new java.util.Date());
-                        if(diaAtual.equals("23") || diaAtual.equals("24") || diaAtual.equals("25")){
-                            if(tipo == "1"){
-                                MainWindowJA janelaPrincipal = new MainWindowJA();        
-                                janelaPrincipal.setVisible(true);
-                                dispose();
-                            }
-                            if(tipo == "2"){
-                                MainWindowJ janelaPrincipal = new MainWindowJ();        
-                                janelaPrincipal.setVisible(true);
-                                dispose();
-                            }
-                        }else{
-                            MainWindow janelaPrincipal = new MainWindow();        
+            if(conexao.rs.getString("senha").equals(jSenha.getText())){
+                if(conexao.rs.getString("id").equals(tipo)){
+                String diaAtual = new java.text.SimpleDateFormat("dd").format(new java.util.Date());
+                    if(diaAtual.equals("23") || diaAtual.equals("24") || diaAtual.equals("25")){
+                        if(tipo == "1"){
+                            MainWindowJA janelaPrincipal = new MainWindowJA();        
                             janelaPrincipal.setVisible(true);
                             dispose();
                         }
+                        if(tipo == "2"){
+                            MainWindowJ janelaPrincipal = new MainWindowJ();        
+                            janelaPrincipal.setVisible(true);
+                            dispose();
                         }
-                    else{
-                        JOptionPane.showMessageDialog(null,"O usuário e senha informado não corresponde ao tipo de funcionário!");
-                    }
                     }else{
-                        JOptionPane.showMessageDialog(null,"Usuário e/ou senha incorretos.\nAcesso negado!");
-                    
+                        MainWindow janelaPrincipal = new MainWindow();        
+                        janelaPrincipal.setVisible(true);
+                        dispose();
+                    }
                 }
-        } catch (SQLException ex) {
+                else{
+                    JOptionPane.showMessageDialog(null,"O usuário e senha informado não corresponde ao tipo de funcionário!");
+                }
+            }else{
+                JOptionPane.showMessageDialog(null,"Usuário e/ou senha incorretos.\nAcesso negado!");
+            }
+        }catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,"Usuário e/ou senha incorretos.\nAcesso negado!");
             //Logger.getLogger(Autenticacao.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-//  if((jCPF.getText().equals("admin") && jSenha.getText().equals("12345"))){
-//        String diaAtual = new java.text.SimpleDateFormat("dd").format(new java.util.Date());
-//        if(diaAtual.equals("03") || diaAtual.equals("24") || diaAtual.equals("25")){
-//            if(tipo == 1){
-//                MainWindowJA janelaPrincipal = new MainWindowJA();        
-//                janelaPrincipal.setVisible(true);
-//                dispose();
-//            }else{
-//                MainWindowJ janelaPrincipal = new MainWindowJ();        
-//                janelaPrincipal.setVisible(true);
-//                dispose();
-//            }
-//        }else{
-//            MainWindow janelaPrincipal = new MainWindow();        
-//            janelaPrincipal.setVisible(true);
-//            dispose();
-//        }
-//  }else{
-//      JOptionPane.showMessageDialog(null,"Usuário e/ou senha incorretos.\nAcesso negado!");
-//  }
-        
-        
+        } 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCPFActionPerformed

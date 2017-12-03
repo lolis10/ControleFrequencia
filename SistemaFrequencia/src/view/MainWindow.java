@@ -156,6 +156,7 @@ public class MainWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botao_RegistrarFrequenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_RegistrarFrequenciaActionPerformed
+        
         RegistrarFrequencia r = new RegistrarFrequencia();
         r.setVisible(true);
     }//GEN-LAST:event_botao_RegistrarFrequenciaActionPerformed
