@@ -141,7 +141,7 @@ public class Autenticacao extends javax.swing.JFrame {
             if(conexao.rs.getString("senha").equals(jSenha.getText())){
                 if(conexao.rs.getString("id").equals(tipo)){
                 String diaAtual = new java.text.SimpleDateFormat("dd").format(new java.util.Date());
-                    if(diaAtual.equals("23") || diaAtual.equals("24") || diaAtual.equals("25")){
+                    if(diaAtual.equals("03") || diaAtual.equals("24") || diaAtual.equals("25")){
                         if(tipo == "1"){
                             MainWindowJA janelaPrincipal = new MainWindowJA();        
                             janelaPrincipal.setVisible(true);
