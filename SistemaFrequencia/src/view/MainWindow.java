@@ -62,6 +62,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         botao_VerFrequencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Calendário-48.png"))); // NOI18N
         botao_VerFrequencia.setText("Ver Frequência");
+        botao_VerFrequencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao_VerFrequenciaActionPerformed(evt);
+            }
+        });
 
         botao_Voltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Casa-48.png"))); // NOI18N
         botao_Voltar.setText("Voltar");
@@ -158,6 +163,12 @@ public class MainWindow extends javax.swing.JFrame {
         janelaLogin.setVisible(true);
         dispose();
     }//GEN-LAST:event_botao_VoltarActionPerformed
+
+    private void botao_VerFrequenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_VerFrequenciaActionPerformed
+        VerFrequencia janelaFrequencia = new VerFrequencia();
+        janelaFrequencia.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botao_VerFrequenciaActionPerformed
 
     /**
      * @param args the command line arguments
