@@ -103,7 +103,7 @@ public class TipoFuncionario extends javax.swing.JFrame {
     private void botao_AcessoGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_AcessoGerenteActionPerformed
         //conexao.conexao();
         Autenticacao Autenticar = new Autenticacao();
-        Autenticar.setTipo(2);
+        Autenticar.setTipo("1");
         Autenticar.setVisible(true);
         dispose();
     }//GEN-LAST:event_botao_AcessoGerenteActionPerformed
@@ -111,7 +111,7 @@ public class TipoFuncionario extends javax.swing.JFrame {
     private void botao_AcessoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_AcessoFuncionarioActionPerformed
         //conexao.conexao();
         Autenticacao Autenticar = new Autenticacao();
-        Autenticar.setTipo(2);
+        Autenticar.setTipo("2");
         Autenticar.setVisible(true);
         dispose();
     }//GEN-LAST:event_botao_AcessoFuncionarioActionPerformed
