@@ -145,8 +145,10 @@
                   <Image iconType="3" name="/sistemafrequencia/icons/icons8-Erro-48.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Justificar Aus&#xea;ncia(s)"/>
-                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="botao_AlterarAusenciasEquipe">
               <Properties>

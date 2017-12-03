@@ -136,7 +136,7 @@ public class VerFrequencia extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSairActionPerformed
-        MainWindow janelaPrincipal = new MainWindow();
+        MainWindowJA janelaPrincipal = new MainWindowJA();
         janelaPrincipal.setVisible(true);
         dispose();
     }//GEN-LAST:event_botaoSairActionPerformed

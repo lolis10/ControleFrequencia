@@ -5,16 +5,18 @@
  */
 package view;
 
+import connection.ConexaoBD;
+
 /**
  *
  * @author asus
  */
-public class Login extends javax.swing.JFrame {
-
+public class TipoFuncionario extends javax.swing.JFrame {
+    ConexaoBD conexao = new ConexaoBD();
     /**
      * Creates new form Login
      */
-    public Login() {
+    public TipoFuncionario() {
         initComponents();
     }
 
@@ -28,9 +30,9 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         botao_AcessoGerente = new javax.swing.JButton();
-        botao_AcessoDireitor = new javax.swing.JButton();
         botao_AcessoFuncionario = new javax.swing.JButton();
         Label_SistemaFrequencia = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -39,14 +41,6 @@ public class Login extends javax.swing.JFrame {
         botao_AcessoGerente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botao_AcessoGerenteActionPerformed(evt);
-            }
-        });
-
-        botao_AcessoDireitor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Administrador Masculino-48.png"))); // NOI18N
-        botao_AcessoDireitor.setText("Diretor");
-        botao_AcessoDireitor.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botao_AcessoDireitorActionPerformed(evt);
             }
         });
 
@@ -62,52 +56,70 @@ public class Login extends javax.swing.JFrame {
         Label_SistemaFrequencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Label_SistemaFrequencia.setText("SISTEMA DE FREQUÊNCIA");
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Sair-40.png"))); // NOI18N
+        jButton1.setText("Sair");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Label_SistemaFrequencia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 477, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(botao_AcessoDireitor)
-                .addGap(18, 18, 18)
+                .addGap(93, 93, 93)
                 .addComponent(botao_AcessoGerente)
                 .addGap(18, 18, 18)
                 .addComponent(botao_AcessoFuncionario)
-                .addContainerGap(14, Short.MAX_VALUE))
-            .addComponent(Label_SistemaFrequencia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(188, 188, 188))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botao_AcessoDireitor, botao_AcessoFuncionario, botao_AcessoGerente});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {botao_AcessoFuncionario, botao_AcessoGerente});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(Label_SistemaFrequencia)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botao_AcessoGerente)
-                    .addComponent(botao_AcessoDireitor)
                     .addComponent(botao_AcessoFuncionario))
-                .addGap(129, 129, 129))
+                .addGap(62, 62, 62)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void botao_AcessoGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_AcessoGerenteActionPerformed
-        // TODO add your handling code here:
+        //conexao.conexao();
+        Autenticacao Autenticar = new Autenticacao();
+        Autenticar.setTipo(2);
+        Autenticar.setVisible(true);
+        dispose();
     }//GEN-LAST:event_botao_AcessoGerenteActionPerformed
 
     private void botao_AcessoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_AcessoFuncionarioActionPerformed
-        MainWindow janelaPrincipal = new MainWindow();
-        janelaPrincipal.setVisible(true);
+        //conexao.conexao();
+        Autenticacao Autenticar = new Autenticacao();
+        Autenticar.setTipo(2);
+        Autenticar.setVisible(true);
         dispose();
     }//GEN-LAST:event_botao_AcessoFuncionarioActionPerformed
 
-    private void botao_AcessoDireitorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_AcessoDireitorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botao_AcessoDireitorActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.exit(0);
+        conexao.desconecta();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,26 +138,27 @@ public class Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TipoFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TipoFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TipoFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TipoFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new Login().setVisible(true);
+            new TipoFuncionario().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Label_SistemaFrequencia;
-    private javax.swing.JButton botao_AcessoDireitor;
     private javax.swing.JButton botao_AcessoFuncionario;
     private javax.swing.JButton botao_AcessoGerente;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

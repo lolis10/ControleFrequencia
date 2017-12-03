@@ -1,13 +1,13 @@
 
 package model;
 
-import view.Login;
+import view.TipoFuncionario;
 
 public class SistemaFrequencia {
 
     
     public static void main(String[] args) {
-        Login janelaLogin = new Login();
+        TipoFuncionario janelaLogin = new TipoFuncionario();
         janelaLogin.setVisible(true);
     }
     
