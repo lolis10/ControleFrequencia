@@ -89,6 +89,11 @@ public class VerFrequencia extends javax.swing.JFrame {
 
         botaoSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Voltar-48.png"))); // NOI18N
         botaoSair.setText("Voltar");
+        botaoSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSairActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -129,6 +134,12 @@ public class VerFrequencia extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSairActionPerformed
+        MainWindow janelaPrincipal = new MainWindow();
+        janelaPrincipal.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botaoSairActionPerformed
 
     /**
      * @param args the command line arguments
