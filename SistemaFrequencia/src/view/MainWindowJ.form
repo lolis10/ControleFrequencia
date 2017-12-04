@@ -83,7 +83,7 @@
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="botao_Sair" min="-2" max="-2" attributes="0"/>
                                   <Component id="botao_VerFrequencia" alignment="0" pref="236" max="32767" attributes="0"/>
-                                  <Component id="botao_AlterarAusenciasEquipe" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jButton2" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -102,9 +102,9 @@
                           <Component id="botao_VerFrequencia" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botao_AlterarAusenciasEquipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jButton1" max="32767" attributes="0"/>
+                          <Component id="jButton2" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -150,15 +150,6 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="botao_AlterarAusenciasEquipe">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/sistemafrequencia/icons/icons8-Empres&#xe1;ria-48.png"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Justificar Aus&#xea;ncia(s) da equipe"/>
-                <Property name="enabled" type="boolean" value="false"/>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JButton" name="botao_VerFrequencia">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -186,6 +177,17 @@
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Sistema de Frequ&#xea;ncia"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton2">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/sistemafrequencia/icons/icons8-Folha de pagamento-48.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Folha de Pagamento"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

@@ -17,10 +17,10 @@ import javax.swing.JOptionPane;
 public class ConexaoBD {
     public Statement stn;
     public ResultSet rs;
-    private String driver = "org.postgresql.Driver";
-    private String caminho = "jdbc:postgresql://localhost:5432/ControleFrequencia";
-    private String usuario = "postgres";
-    private String senha = "12345";
+    private final String driver = "org.postgresql.Driver";
+    private final String caminho = "jdbc:postgresql://localhost:5432/ControleFrequencia";
+    private final String usuario = "postgres";
+    private final String senha = "12345";
     public Connection con;
     
     public void conexao(){

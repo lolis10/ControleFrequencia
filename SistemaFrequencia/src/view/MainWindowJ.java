@@ -35,10 +35,10 @@ public class MainWindowJ extends javax.swing.JFrame {
         botao_Sair = new javax.swing.JButton();
         botao_Voltar = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        botao_AlterarAusenciasEquipe = new javax.swing.JButton();
         botao_VerFrequencia = new javax.swing.JButton();
         botao_RegistrarFrequencia = new javax.swing.JButton();
         label_SistemaFrequencia = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,10 +68,6 @@ public class MainWindowJ extends javax.swing.JFrame {
             }
         });
 
-        botao_AlterarAusenciasEquipe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Empresária-48.png"))); // NOI18N
-        botao_AlterarAusenciasEquipe.setText("Justificar Ausência(s) da equipe");
-        botao_AlterarAusenciasEquipe.setEnabled(false);
-
         botao_VerFrequencia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Calendário-48.png"))); // NOI18N
         botao_VerFrequencia.setText("Ver Frequência");
 
@@ -86,6 +82,14 @@ public class MainWindowJ extends javax.swing.JFrame {
         label_SistemaFrequencia.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         label_SistemaFrequencia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label_SistemaFrequencia.setText("Sistema de Frequência");
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sistemafrequencia/icons/icons8-Folha de pagamento-48.png"))); // NOI18N
+        jButton2.setText("Folha de Pagamento");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -107,7 +111,7 @@ public class MainWindowJ extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(botao_Sair)
                             .addComponent(botao_VerFrequencia, javax.swing.GroupLayout.DEFAULT_SIZE, 236, Short.MAX_VALUE)
-                            .addComponent(botao_AlterarAusenciasEquipe, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))))
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -120,9 +124,9 @@ public class MainWindowJ extends javax.swing.JFrame {
                     .addComponent(botao_RegistrarFrequencia)
                     .addComponent(botao_VerFrequencia))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(botao_AlterarAusenciasEquipe))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botao_Voltar)
@@ -164,6 +168,11 @@ public class MainWindowJ extends javax.swing.JFrame {
         r.setVisible(true);
     }//GEN-LAST:event_botao_RegistrarFrequenciaActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Justificativa j = new Justificativa();
+        j.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     private void botao_VoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_VoltarActionPerformed
         TipoFuncionario t = new TipoFuncionario();
         t.setVisible(true);
@@ -174,10 +183,10 @@ public class MainWindowJ extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_botao_SairActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Justificativa j = new Justificativa();
-        j.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FolhaPagamento janelaFolhapgto = new FolhaPagamento();
+        janelaFolhapgto.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -233,12 +242,12 @@ public class MainWindowJ extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botao_AlterarAusenciasEquipe;
     private javax.swing.JButton botao_RegistrarFrequencia;
     private javax.swing.JButton botao_Sair;
     private javax.swing.JButton botao_VerFrequencia;
     private javax.swing.JButton botao_Voltar;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel label_SistemaFrequencia;

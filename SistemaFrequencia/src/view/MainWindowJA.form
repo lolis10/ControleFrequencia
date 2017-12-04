@@ -67,20 +67,21 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton2" pref="234" max="32767" attributes="0"/>
+                          <Component id="jButton2" linkSize="1" pref="234" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="botao_Voltar" min="-2" max="-2" attributes="0"/>
                               <Group type="103" alignment="1" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jButton1" pref="234" max="32767" attributes="0"/>
-                                  <Component id="botao_RegistrarFrequencia" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jButton1" linkSize="1" pref="234" max="32767" attributes="0"/>
+                                  <Component id="botao_RegistrarFrequencia" linkSize="1" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="botao_Sair" min="-2" max="-2" attributes="0"/>
-                          <Component id="botao_VerFrequencia" alignment="0" pref="236" max="32767" attributes="0"/>
-                          <Component id="botao_AlterarAusenciasEquipe" alignment="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="botao_VerFrequencia" linkSize="1" alignment="0" pref="236" max="32767" attributes="0"/>
+                          <Component id="botao_AlterarAusenciasEquipe" linkSize="1" alignment="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="botao_FolhaPagamento" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace pref="48" max="32767" attributes="0"/>
                   </Group>
@@ -94,20 +95,23 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                      <EmptySpace pref="23" max="32767" attributes="0"/>
                       <Component id="label_SistemaFrequencia" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="botao_RegistrarFrequencia" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botao_VerFrequencia" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botao_RegistrarFrequencia" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botao_VerFrequencia" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="botao_AlterarAusenciasEquipe" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botao_AlterarAusenciasEquipe" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton2" pref="54" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jButton2" linkSize="2" pref="54" max="32767" attributes="0"/>
+                          <Component id="botao_FolhaPagamento" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="botao_Sair" min="-2" max="-2" attributes="0"/>
@@ -197,6 +201,17 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="botao_FolhaPagamento">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/sistemafrequencia/icons/icons8-Folha de pagamento-48.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Folha de Pagamento"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botao_FolhaPagamentoActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
